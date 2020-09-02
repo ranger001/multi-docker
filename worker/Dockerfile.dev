@@ -1,0 +1,14 @@
+#development dockerfile
+FROM node:alpine 
+
+WORKDIR '/app'
+
+#copy files needed (package.json)
+COPY ./package.json ./
+COPY ./.npmrc ./
+
+#Install dependencies
+RUN npm install
+COPY ./ ./
+#Default Command
+CMD ["npm", "run", "dev"]
