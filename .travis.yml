@@ -8,7 +8,7 @@ services:
 
 #build our image using dockerfile.dev (since we want to run the test suite first)
 before_install:
-    - docker build -t ranger001/docker-client-test -f ./client/Dockerfile.dev ./client
+    - docker build -t ranger001/docker-client-test -f ./client/Dockerfile.deploy ./client
 
 
 #tell travis how to run our test suite for the build we just did 
