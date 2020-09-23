@@ -29,6 +29,13 @@ after_success:
     - docker push ranger001/multi-nginx
     - docker push ranger001/multi-server
     - docker push ranger001/multi-worker
+
+
+deploy:
+    edge: true
+    provider: elasticbeanstalk   
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY 
     
 
 
